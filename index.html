@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Argila & Afeto | E-commerce</title>
+</head>
+
+<body>
+    <header class="Menu">
+        <a href="#inicio" class="logo-link">
+            <img src="/img/logo.png" alt="Argila & Afeto - Cerâmica Artesanal" class="logo">
+        </a>
+        <nav class="menu-nav">
+            <ul class="navegacao">
+                <li><a href="#inicio">Início</a></li>
+                <li><a href="#categorias">Categorias</a></li>
+                <li><a href="#vitrine">Produtos</a></li>
+                <li><a href="cadastro.html">Entrar / Cadastrar</a></li>
+            </ul>
+            <div class="header-acoes">
+                <a href="carrinho.html" class="carrinho-btn" aria-label="Ver carrinho de compras">
+                    <svg class="carrinho-icone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="9" cy="21" r="1"></circle>
+                        <circle cx="20" cy="21" r="1"></circle>
+                        <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                    </svg>
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero" id="inicio">
+            <div class="carrossel">
+                <div class="slide">
+                    <picture>
+                        <source media="(max-width: 768px)" srcset="ceramica2.jpg">
+                        <img src="/img/ceramica.jpg" alt="Banner 1 - Canecas Artesanais de Cerâmica" width="1200" height="380">
+                    </picture>
+                </div>
+
+                <div class="slide">
+                    <picture>
+                        <source media="(max-width: 768px)" srcset="ceramica3.jpg">
+                        <img src="/img/linhanova.jpg" alt="Banner 2 - Cerâmica Rústica Esmaltada" width="1200" height="380">
+                    </picture>
+                </div>
+
+                <div class="slide">
+                    <picture>
+                        <source media="(max-width: 768px)" srcset="ceramica.jpg">
+                        <img src="/img/linhanova2.jpg" alt="Banner 3 - Ofertas Especiais de Cerâmica" width="1200" height="380">
+                    </picture>
+                </div>
+            </div>
+        </section>
+        <section class="categorias" id="categorias">
+            <h2>Categorias em Destaque</h2>
+            <div class="lista-categorias">
+                <div class="item-categoria">
+                    <img src="/img/ceramica.jpg" alt="Categoria Canecas Artesanais" class="img-categoria" width="120" height="120" loading="lazy">
+                    <p>Canecas</p>
+                </div>
+
+                <div class="item-categoria">
+                    <img src="/img/vaso.jpg" alt="Categoria Vasos de Cerâmica" class="img-categoria" width="120" height="120" loading="lazy">
+                    <p>Vasos</p>
+                </div>
+
+                <div class="item-categoria">
+                    <img src="/img/bowl.jpg" alt="Categoria Pratos e Bowls" class="img-categoria" width="120" height="120" loading="lazy">
+                    <p>Pratos & Bowls</p>
+                </div>
+
+                <div class="item-categoria">
+                    <img src="/img/xicaras.webp" alt="Categoria Kits Especiais" class="img-categoria" width="120" height="120" loading="lazy">
+                    <p>Kits Especiais</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="vitrine" id="vitrine">
+            <h2>Vitrine de Produtos</h2>
+            <div class="grid-produtos">
+
+                <article class="card">
+                    <figure class="container-foto">
+                        <a href="produto.html">
+                            <img src="/img/ceramica.jpg" alt="Caneca Rústica Verde com Pires" class="foto-produto" width="300" height="300" loading="lazy">
+                        </a>
+                    </figure>
+                    <figcaption>
+                        <h3><a href="produto.html" class="link-titulo-produto">Caneca Verde Bosque</a></h3>
+                        <p>R$ 74,90</p>
+                        <a href="carrinho.html" class="btn-comprar">Comprar</a>
+                    </figcaption>
+                </article>
+
+                <article class="card">
+                    <figure class="container-foto">
+                        <a href="produto.html">
+                            <img src="/img/ceramica2.jpg" alt="Caneca Turquesa Imperial" class="foto-produto" width="300" height="300" loading="lazy">
+                        </a>
+                    </figure>
+                    <figcaption>
+                        <h3><a href="produto.html" class="link-titulo-produto">Caneca Turquesa</a></h3>
+                        <p>R$ 84,90</p>
+                        <a href="carrinho.html" class="btn-comprar">Comprar</a>
+                    </figcaption>
+                </article>
+
+                <!-- Produto 3: MODELO ESGOTADO NA FILEIRA -->
+                <article class="card esgotado">
+                    <figure class="container-foto">
+                        <span class="tag-esgotado">ESGOTADO</span>
+                        <img src="/img/xicaras.webp" alt="Conjunto Xícaras Espresso - Produto Esgotado" class="foto-produto" width="300" height="300" loading="lazy">
+                    </figure>
+                    <figcaption>
+                        <h3>Xícaras Espresso</h3>
+                        <p>Indisponível</p>
+                        <button type="button" disabled>Avise-me</button>
+                    </figcaption>
+                </article>
+
+                <!-- Produto 4 -->
+                <article class="card">
+                    <figure class="container-foto">
+                        <a href="produto.html">
+                            <img src="/img/vaso.jpg" alt="Vaso Orgânico de Cerâmica" class="foto-produto" width="300" height="300" loading="lazy">
+                        </a>
+                    </figure>
+                    <figcaption>
+                        <h3><a href="produto.html" class="link-titulo-produto">Vaso Terracota</a></h3>
+                        <p>R$ 119,00</p>
+                        <a href="carrinho.html" class="btn-comprar">Comprar</a>
+                    </figcaption>
+                </article>
+
+                <!-- Produto 5 -->
+                <article class="card">
+                    <figure class="container-foto">
+                        <a href="produto.html">
+                            <img src="/img/bowl.jpg" alt="Bowl Matinal de Cerâmica" class="foto-produto" width="300" height="300" loading="lazy">
+                        </a>
+                    </figure>
+                    <figcaption>
+                        <h3><a href="produto.html" class="link-titulo-produto">Bowl Matinal</a></h3>
+                        <p>R$ 54,90</p>
+                        <a href="carrinho.html" class="btn-comprar">Comprar</a>
+                    </figcaption>
+                </article>
+
+                <!-- Produto 6 -->
+                <article class="card">
+                    <figure class="container-foto">
+                        <a href="produto.html">
+                            <img src="/img/prato.jpg" alt="Prato de Sobremesa Artesanal" class="foto-produto" width="300" height="300" loading="lazy">
+                        </a>
+                    </figure>
+                    <figcaption>
+                        <h3><a href="produto.html" class="link-titulo-produto">Prato de Sobremesa</a></h3>
+                        <p>R$ 49,90</p>
+                        <a href="carrinho.html" class="btn-comprar">Comprar</a>
+                    </figcaption>
+                </article>
+
+            </div>
+        </section>
+    </main>
+
+    <footer class="rodape">
+        <p><strong>Argila & Afeto</strong> — Cerâmica Artesanal</p>
+        <p>Formas de Pagamento: Cartão de Crédito, Pix e Boleto</p>
+        <p>© 2026 Todos os direitos reservados • Disciplina: Linguagem de Marcação</p>
+    </footer>
+
+    <!-- Script simples para permitir clicar e arrastar com o mouse no desktop -->
+    <script>
+        const carrossel = document.querySelector('.carrossel');
+        let isDown = false;
+        let startX;
+        let scrollLeft;
+
+        carrossel.addEventListener('mousedown', (e) => {
+            isDown = true;
+            startX = e.pageX - carrossel.offsetLeft;
+            scrollLeft = carrossel.scrollLeft;
+        });
+
+        carrossel.addEventListener('mouseleave', () => {
+            isDown = false;
+        });
+
+        carrossel.addEventListener('mouseup', () => {
+            isDown = false;
+        });
+
+        carrossel.addEventListener('mousemove', (e) => {
+            if (!isDown) return;
+            e.preventDefault();
+            const x = e.pageX - carrossel.offsetLeft;
+            const walk = (x - startX) * 1.5;
+            carrossel.scrollLeft = scrollLeft - walk;
+        });
+    </script>
+</body>
+
+</html>

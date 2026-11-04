@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Meu Carrinho de Compras | Argila & Afeto</title>
+</head>
+<body>
+
+    <!-- Header Compartilhado com Navegação Real -->
+    <header class="Menu">
+        <a href="index.html#inicio" class="logo-link">
+            <img src="/img/logo.png" alt="Argila & Afeto - Cerâmica Artesanal" class="logo">
+        </a>
+        <nav class="menu-nav">
+            <ul class="navegacao">
+                <li><a href="index.html#inicio">Início</a></li>
+                <li><a href="index.html#categorias">Categorias</a></li>
+                <li><a href="index.html#vitrine">Produtos</a></li>
+                <li><a href="cadastro.html">Entrar / Cadastrar</a></li>
+            </ul>
+            <div class="header-acoes">
+                <a href="carrinho.html" class="carrinho-btn ativa" aria-label="Ver carrinho de compras">
+                    <svg class="carrinho-icone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="9" cy="21" r="1"></circle>
+                        <circle cx="20" cy="21" r="1"></circle>
+                        <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                    </svg>
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container-carrinho">
+        <div class="carrinho-titulo-secao">
+            <h1>Carrinho de Compras</h1>
+            <p>Confira os itens selecionados antes de finalizar seu pedido artesanal.</p>
+        </div>
+
+        <div class="carrinho-layout">
+            <!-- 1. Tabela Semântica Completa de Itens do Carrinho -->
+            <section class="carrinho-itens">
+                <table class="tabela-carrinho">
+                    <caption>Relação de cerâmicas artesanais adicionadas ao carrinho</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col">Produto</th>
+                            <th scope="col">Preço Unitário</th>
+                            <th scope="col">Quantidade</th>
+                            <th scope="col">Subtotal</th>
+                            <th scope="col">Ação</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Produto 1 -->
+                        <tr>
+                            <td class="coluna-produto">
+                                <img src="/img/ceramica.jpg" alt="Caneca Verde Bosque" class="miniatura-carrinho">
+                                <div class="detalhe-item">
+                                    <a href="produto.html" class="nome-item">Caneca Verde Bosque</a>
+                                    <span class="categoria-item">Canecas Artesanais • 320ml</span>
+                                </div>
+                            </td>
+                            <td class="preco-unitario">R$ 74,90</td>
+                            <td class="coluna-quantidade">
+                                <input type="number" min="1" value="1" class="input-qtd" aria-label="Quantidade da Caneca Verde Bosque">
+                            </td>
+                            <td class="subtotal-item">R$ 74,90</td>
+                            <td class="coluna-acao">
+                                <button type="button" class="btn-remover" title="Remover item do carrinho" aria-label="Remover Caneca Verde Bosque">🗑️</button>
+                            </td>
+                        </tr>
+
+                        <!-- Produto 2 -->
+                        <tr>
+                            <td class="coluna-produto">
+                                <img src="/img/vaso.jpg" alt="Vaso Terracota" class="miniatura-carrinho">
+                                <div class="detalhe-item">
+                                    <a href="produto.html" class="nome-item">Vaso Terracota</a>
+                                    <span class="categoria-item">Decoração • Argila Queimada</span>
+                                </div>
+                            </td>
+                            <td class="preco-unitario">R$ 119,00</td>
+                            <td class="coluna-quantidade">
+                                <input type="number" min="1" value="1" class="input-qtd" aria-label="Quantidade do Vaso Terracota">
+                            </td>
+                            <td class="subtotal-item">R$ 119,00</td>
+                            <td class="coluna-acao">
+                                <button type="button" class="btn-remover" title="Remover item do carrinho" aria-label="Remover Vaso Terracota">🗑️</button>
+                            </td>
+                        </tr>
+
+                        <!-- Produto 3 -->
+                        <tr>
+                            <td class="coluna-produto">
+                                <img src="/img/bowl.jpg" alt="Bowl Matinal de Cerâmica" class="miniatura-carrinho">
+                                <div class="detalhe-item">
+                                    <a href="produto.html" class="nome-item">Bowl Matinal</a>
+                                    <span class="categoria-item">Utilitários • Esmalte Branco</span>
+                                </div>
+                            </td>
+                            <td class="preco-unitario">R$ 54,90</td>
+                            <td class="coluna-quantidade">
+                                <input type="number" min="1" value="2" class="input-qtd" aria-label="Quantidade do Bowl Matinal">
+                            </td>
+                            <td class="subtotal-item">R$ 109,80</td>
+                            <td class="coluna-acao">
+                                <button type="button" class="btn-remover" title="Remover item do carrinho" aria-label="Remover Bowl Matinal">🗑️</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="5" class="aviso-frete">
+                                🚚 <strong>Parabéns!</strong> Seu pedido atingiu R$ 303,70 e ganhou <strong>Frete Grátis</strong> para todo o Brasil.
+                            </td>
+                        </tr>
+                    </tfoot>
+                </table>
+
+                <div class="carrinho-acoes-extras">
+                    <a href="index.html#vitrine" class="btn-continuar-comprando">← Continuar Comprando</a>
+                </div>
+            </section>
+
+            <!-- 2. Card Lateral de Resumo do Pedido -->
+            <aside class="order-summary">
+                <h2>Resumo do Pedido</h2>
+                
+                <div class="linha-resumo">
+                    <span>Subtotal (4 itens)</span>
+                    <strong>R$ 303,70</strong>
+                </div>
+
+                <div class="linha-resumo">
+                    <span>Frete</span>
+                    <span class="frete-gratis">Grátis</span>
+                </div>
+
+                <!-- Campo Cupom de Desconto -->
+                <div class="bloco-cupom">
+                    <label for="cupom-desconto">Cupom de Desconto:</label>
+                    <div class="input-cupom-grupo">
+                        <input type="text" id="cupom-desconto" placeholder="Ex: ARTESANAL10" class="input-cupom">
+                        <button type="button" class="btn-aplicar-cupom">Aplicar</button>
+                    </div>
+                </div>
+
+                <hr class="divisor-resumo">
+
+                <div class="linha-resumo total-pedido">
+                    <span>Valor Total</span>
+                    <strong class="valor-destaque">R$ 303,70</strong>
+                </div>
+                <p class="parcelamento-info">em até 3x de R$ 101,23 sem juros</p>
+
+                <!-- Botão de destaque para cadastro.html -->
+                <a href="cadastro.html" class="btn-checkout">Finalizar Compra →</a>
+
+                <div class="seguranca-info">
+                    <span>🔒 Compra 100% Segura e Protegida</span>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <footer class="rodape">
+        <p><strong>Argila & Afeto</strong> — Cerâmica Artesanal</p>
+        <p>Formas de Pagamento: Cartão de Crédito, Pix e Boleto</p>
+        <p>© 2026 Todos os direitos reservados • Disciplina: Linguagem de Marcação</p>
+    </footer>
+
+</body>
+</html>

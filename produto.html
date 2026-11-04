@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Caneca Verde Bosque | Argila & Afeto</title>
+</head>
+<body>
+
+    <!-- Header Compartilhado com Navegação Real -->
+    <header class="Menu">
+        <a href="index.html#inicio" class="logo-link">
+            <img src="/img/logo.png" alt="Argila & Afeto - Cerâmica Artesanal" class="logo">
+        </a>
+        <nav class="menu-nav">
+            <ul class="navegacao">
+                <li><a href="index.html#inicio">Início</a></li>
+                <li><a href="index.html#categorias">Categorias</a></li>
+                <li><a href="index.html#vitrine">Produtos</a></li>
+                <li><a href="cadastro.html">Entrar / Cadastrar</a></li>
+            </ul>
+            <div class="header-acoes">
+                <a href="carrinho.html" class="carrinho-btn" aria-label="Ver carrinho de compras">
+                    <svg class="carrinho-icone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="9" cy="21" r="1"></circle>
+                        <circle cx="20" cy="21" r="1"></circle>
+                        <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                    </svg>
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container-produto">
+        <!-- 1. Layout de Duas Colunas (Flexbox / Grid) -->
+        <section class="produto-detalhes">
+            
+            <!-- Coluna da Esquerda (Galeria de Imagens) -->
+            <div class="galeria-fotos">
+                <div class="foto-destaque">
+                    <img id="imagem-principal" src="/img/ceramica.jpg" alt="Caneca Verde Bosque artesanal com pires de apoio">
+                </div>
+                <div class="miniaturas">
+                    <img src="/img/ceramica.jpg" alt="Miniatura Caneca Verde Bosque" class="miniatura ativa" onclick="trocarImagem(this)">
+                    <img src="/img/terracota.jpg" alt="Miniatura Detalhe do Acabamento Rústico" class="miniatura" onclick="trocarImagem(this)">
+                    <img src="/img/bege.png" alt="Miniatura Vista com Pires Artesanal" class="miniatura" onclick="trocarImagem(this)">
+                </div>
+            </div>
+
+            <!-- Coluna da Direita (Informações de Compra) -->
+            <div class="info-compra">
+                <!-- Trilha de navegação (breadcrumb) -->
+                <nav class="breadcrumb" aria-label="Caminho de navegação">
+                    <a href="index.html">Início</a> &gt; 
+                    <a href="index.html#categorias">Canecas</a> &gt; 
+                    <span>Caneca Verde Bosque</span>
+                </nav>
+
+                <h1 class="produto-titulo">Caneca Verde Bosque</h1>
+
+                <!-- Avaliação em estrelas -->
+                <div class="avaliacao">
+                    <span class="estrelas" aria-label="Avaliação: 5 de 5 estrelas">★★★★★</span>
+                    <span class="nota">(4.9 de 5 — 42 avaliações de clientes)</span>
+                </div>
+
+                <!-- Preço atual -->
+                <div class="precos">
+                    <span class="preco-atual">R$ 74,90</span>
+                </div>
+
+                <p class="produto-descricao-curta">
+                    Feita à mão com argila selecionada e esmalte vitrificado verde oliva acetinado. 
+                    Peça única, perfeita para cafés especiais e momentos de pausa e aconchego.
+                </p>
+
+                <!-- Seletor de opções (cor / acabamento e tamanho) -->
+                <form class="opcoes-compra">
+                    <div class="campo-opcao">
+                        <label for="seletor-cor"><strong>Cor / Acabamento:</strong></label>
+                        <select id="seletor-cor" name="cor" class="select-estilizado">
+                            <option value="verde" selected>Verde Bosque (Acetinado)</option>
+                            <option value="terracota">Terracota Natural (Rústico)</option>
+                            <option value="areia">Areia Texturizado (Fosco)</option>
+                        </select>
+                    </div>
+
+                    <div class="campo-opcao">
+                        <label><strong>Capacidade / Volume:</strong></label>
+                        <div class="radio-grupo">
+                            <label class="radio-label">
+                                <input type="radio" name="capacidade" value="200ml">
+                                <span>200 ml</span>
+                            </label>
+                            <label class="radio-label">
+                                <input type="radio" name="capacidade" value="320ml" checked>
+                                <span>320 ml (Padrão)</span>
+                            </label>
+                            <label class="radio-label">
+                                <input type="radio" name="capacidade" value="450ml">
+                                <span>450 ml</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Botão principal para carrinho.html -->
+                    <a href="carrinho.html" class="btn-adicionar-carrinho">Adicionar ao Carrinho</a>
+                </form>
+            </div>
+        </section>
+
+        <!-- 2. Tabela de Especificações Técnicas (Semântica + Zebrado) -->
+        <section class="especificacoes">
+            <h2>Especificações Técnicas</h2>
+            <table class="tabela-especificacoes">
+                <tbody>
+                    <tr>
+                        <th scope="row">Marca</th>
+                        <td>Argila & Afeto (Produção Artesanal Própria)</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Material</th>
+                        <td>Argila terracota nobre com esmaltação cerâmica atóxica (livre de chumbo)</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Dimensões</th>
+                        <td>9,5 cm (altura) x 8,5 cm (diâmetro da boca)</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Peso</th>
+                        <td>320 g</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Capacidade</th>
+                        <td>320 ml</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Garantia</th>
+                        <td>90 dias contra defeitos estruturais e quebras no transporte</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <footer class="rodape">
+        <p><strong>Argila & Afeto</strong> — Cerâmica Artesanal</p>
+        <p>Formas de Pagamento: Cartão de Crédito, Pix e Boleto</p>
+        <p>© 2026 Todos os direitos reservados • Disciplina: Linguagem de Marcação</p>
+    </footer>
+
+    <!-- Script opcional e leve para alternar miniaturas na foto de destaque -->
+    <script>
+        function trocarImagem(elemento) {
+            const principal = document.getElementById('imagem-principal');
+            principal.src = elemento.src;
+            document.querySelectorAll('.miniatura').forEach(img => img.classList.remove('ativa'));
+            elemento.classList.add('ativa');
+        }
+    </script>
+</body>
+</html>
